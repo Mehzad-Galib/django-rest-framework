@@ -10,7 +10,7 @@ class CourseSerializers(serializers.ModelSerializer):
 
 
 class StudentSerializers(serializers.ModelSerializer):
-    course = CourseSerializers(many=True)
+    course = CourseSerializers(many=True, read_only=True)
 
     class Meta:
         model = models.Studentdata
